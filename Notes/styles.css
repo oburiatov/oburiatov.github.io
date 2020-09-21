@@ -1,0 +1,108 @@
+html {
+    background-color: #1d3557;
+}
+
+table {
+    border-collapse: collapse;
+    /*убираем пустые промежутки между ячейками*/
+    border: 0;
+    /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+    border-color: #1d3557;
+    width: 1300px;
+    height: 1080px;
+    margin: auto;
+    text-align: left;
+    overflow: auto;
+
+}
+
+.headline_row {
+    background-color: #f1faee;
+    height: 80px;
+}
+
+
+.right_column {
+    width: 900px;
+    height: 1000px;
+    background-color: #a8dadc;
+    vertical-align: top;
+    text-align: left;
+     overflow: auto;
+
+
+}
+
+.left_column {
+    width: 400px;
+    background-color: #457b9d;
+    height: 1000px;
+    text-align: left;
+    vertical-align: top;
+    overflow: auto;
+    position: fixed;
+
+}
+
+
+#edit,
+#delete {
+    margin: 8px;
+    color: #fff;
+    /* цвет текста */
+    text-decoration: none;
+    /* убирать подчёркивание у ссылок */
+    user-select: none;
+    /* убирать выделение текста */
+    background: rgb(212, 75, 56);
+    /* фон кнопки */
+    padding: .7em 1.5em;
+    /* отступ от текста */
+    outline: none;
+    /* убирать контур в Mozilla */
+}
+
+#edit:hover,
+#delete:hover {
+    background: rgb(232, 95, 76);
+}
+
+/* при наведении курсора мышки */
+#edit:active,
+#delete:active {
+    background: rgb(152, 15, 0);
+}
+
+/* при нажатии */
+
+#newNote {
+    margin: 8px;
+    color: #fff;
+    /* цвет текста */
+    text-decoration: none;
+    /* убирать подчёркивание у ссылок */
+    user-select: none;
+    /* убирать выделение текста */
+    background: #99ADFF;
+    /* фон кнопки */
+    padding: .7em 1.5em;
+    /* отступ от текста */
+    outline: none;
+    /* убирать контур в Mozilla */
+    height: 100px;
+}
+
+#newNote:hover {
+    background: #C2CEFF;
+}
+
+/* при наведении курсора мышки */
+#newNote:active {
+    background: #708DFF;
+}
+
+/* при нажатии */
+
+#noteField {
+     padding: .7em 1.5em;
+}

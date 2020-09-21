@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Notes</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-    <h1>Hello World!</h1>
+    <table>
+        <tr>
+            <th colspan="2" class="headline_row">
+                <div>
+                    <a href="#" id="edit" onclick="appearNote()">Добавить</a>
+                    <a href="#" id="delete">Удалить заметку</a>
+                </div>
+
+            </th>
+        </tr>
+        <tr>
+            <td class="left_column">
+                <div id="addNote">
+                </div>
+            </td>
+            <td class="right_column">
+                <div id="noteField">
+                    Ячейка 4
+                </div>
+            </td>
+        </tr>
+    </table>
+
 </body>
+
 </html>
