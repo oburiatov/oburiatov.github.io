@@ -186,7 +186,7 @@ window.onbeforeunload = function () {
 }
 
 window.addEventListener('load', () => {
-    //data_storage.clear();
+    data_storage.clear();
     let set_id = data_storage.getItem("notesID");
     let set_note_data = data_storage.getItem("links_to_note_objects");
     if (set_id != null && set_note_data != null) {
@@ -221,10 +221,15 @@ window.onhashchange = function () {
     var current_hash = url.hash.split("#")[1];
 
     if (url.hash.length > 0) {
-        notes_id.forEach(Element => {
-            if (Element === current_hash)
-                HighlightNote(current_hash);
-        })
+        if (current_hash === "/") {
+            dissapearing_active_Note();
+            url.hash = "/";
+        } else {
+            notes_id.forEach(Element => {
+                if (Element === current_hash)
+                    HighlightNote(current_hash);
+            })
+        }
     } else if (url.hash.length === 0) {
         dissapearing_active_Note();
         url.hash = "/";
