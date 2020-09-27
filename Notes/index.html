@@ -5,28 +5,28 @@
     <meta charset="UTF-8">
     <title>Notes</title>
     <script src="script.js"></script>
+    <script src="classNote.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <table>
+    <table id="table_click">
         <tr>
             <th colspan="2" class="headline_row">
                 <div>
-                    <a href="#" id="edit" onclick="appearNote()">Добавить</a>
-                    <a href="#" id="delete">Удалить заметку</a>
+                    <a href="#" id="create_note" onclick="AddNote()">Добавить</a>
+                    <a href="#" id="delete_note" onclick="DeleteNote()">Удалить заметку</a>
                 </div>
 
             </th>
         </tr>
         <tr>
             <td class="left_column">
-                <div id="addNote">
+                <div class="addNote" id="mainNote">
                 </div>
             </td>
             <td class="right_column">
-                <div id="noteField">
-                    Ячейка 4
+                <div id="noteDIV">
                 </div>
             </td>
         </tr>

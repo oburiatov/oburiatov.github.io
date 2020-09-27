@@ -14,11 +14,13 @@ table {
     text-align: left;
     overflow: auto;
 
+
 }
 
 .headline_row {
     background-color: #f1faee;
     height: 80px;
+
 }
 
 
@@ -28,7 +30,8 @@ table {
     background-color: #a8dadc;
     vertical-align: top;
     text-align: left;
-     overflow: auto;
+    overflow: auto;
+    position: sticky;
 
 
 }
@@ -39,14 +42,15 @@ table {
     height: 1000px;
     text-align: left;
     vertical-align: top;
-    overflow: auto;
+    overflow: scroll;
     position: fixed;
+
 
 }
 
 
-#edit,
-#delete {
+#create_note,
+#delete_note {
     margin: 8px;
     color: #fff;
     /* цвет текста */
@@ -62,20 +66,20 @@ table {
     /* убирать контур в Mozilla */
 }
 
-#edit:hover,
-#delete:hover {
+#create_note:hover,
+#delete_note:hover {
     background: rgb(232, 95, 76);
 }
 
 /* при наведении курсора мышки */
-#edit:active,
-#delete:active {
+#create_note:active,
+#delete_note:active {
     background: rgb(152, 15, 0);
 }
 
 /* при нажатии */
 
-#newNote {
+.Notes {
     margin: 8px;
     color: #fff;
     /* цвет текста */
@@ -85,24 +89,58 @@ table {
     /* убирать выделение текста */
     background: #99ADFF;
     /* фон кнопки */
-    padding: .7em 1.5em;
+    padding-left: 0.7em;
+    padding-top: 1.5em;
     /* отступ от текста */
     outline: none;
     /* убирать контур в Mozilla */
-    height: 100px;
+    height: 70px;
 }
 
-#newNote:hover {
+.Notes:hover {
     background: #C2CEFF;
 }
 
 /* при наведении курсора мышки */
-#newNote:active {
+.Notes:active {
     background: #708DFF;
+
 }
 
 /* при нажатии */
 
+#noteDIV {
+    padding: .7em 1.5em;
+    text-align: left;
+    vertical-align: top;
+}
+
 #noteField {
-     padding: .7em 1.5em;
+    width: 800px;
+    height: 500px;
+    overflow: auto;
+    resize: unset;
+    font-size: 18px;
+    font-family: Courier New;
+    font-weight: 900;
+}
+
+.active_Note {
+    margin: 8px;
+    margin-left: 15px;
+    color: #fff;
+    /* цвет текста */
+    text-decoration: none;
+    /* убирать подчёркивание у ссылок */
+    user-select: none;
+    /* убирать выделение текста */
+    background: #8a0000;
+    /* фон кнопки */
+    padding-left: 0.7em;
+    padding-top: 3em;
+    /* отступ от текста */
+    outline: none;
+    /* убирать контур в Mozilla */
+    height: 100px;
+        font-size: 18px;
 }
