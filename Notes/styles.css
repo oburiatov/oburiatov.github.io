@@ -4,25 +4,19 @@ html {
 
 table {
     border-collapse: collapse;
-    /*убираем пустые промежутки между ячейками*/
     border: 0;
-    /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
     border-color: #1d3557;
     width: 1300px;
     height: 1080px;
     margin: auto;
     text-align: left;
     overflow: auto;
-
-
 }
 
 .headline_row {
     background-color: #f1faee;
     height: 80px;
-
 }
-
 
 .right_column {
     width: 900px;
@@ -32,8 +26,6 @@ table {
     text-align: left;
     overflow: auto;
     position: sticky;
-
-
 }
 
 .left_column {
@@ -44,56 +36,35 @@ table {
     vertical-align: top;
     overflow: scroll;
     position: fixed;
-
-
 }
 
-
-#create_note,
-#delete_note {
+.btn_create_note, .btn_delete_note {
     margin: 8px;
     color: #fff;
-    /* цвет текста */
     text-decoration: none;
-    /* убирать подчёркивание у ссылок */
     user-select: none;
-    /* убирать выделение текста */
     background: rgb(212, 75, 56);
-    /* фон кнопки */
     padding: .7em 1.5em;
-    /* отступ от текста */
     outline: none;
-    /* убирать контур в Mozilla */
 }
 
-#create_note:hover,
-#delete_note:hover {
+.btn_create_note:hover, .btn_delete_note:hover {
     background: rgb(232, 95, 76);
 }
 
-/* при наведении курсора мышки */
-#create_note:active,
-#delete_note:active {
+.btn_create_note:active, .btn_delete_note:active {
     background: rgb(152, 15, 0);
 }
-
-/* при нажатии */
 
 .Notes {
     margin: 8px;
     color: #fff;
-    /* цвет текста */
     text-decoration: none;
-    /* убирать подчёркивание у ссылок */
     user-select: none;
-    /* убирать выделение текста */
     background: #99ADFF;
-    /* фон кнопки */
     padding-left: 0.7em;
     padding-top: 1.5em;
-    /* отступ от текста */
     outline: none;
-    /* убирать контур в Mozilla */
     height: 70px;
 }
 
@@ -101,13 +72,9 @@ table {
     background: #C2CEFF;
 }
 
-/* при наведении курсора мышки */
 .Notes:active {
     background: #708DFF;
-
 }
-
-/* при нажатии */
 
 #noteDIV {
     padding: .7em 1.5em;
@@ -129,18 +96,12 @@ table {
     margin: 8px;
     margin-left: 15px;
     color: #fff;
-    /* цвет текста */
     text-decoration: none;
-    /* убирать подчёркивание у ссылок */
     user-select: none;
-    /* убирать выделение текста */
     background: #8a0000;
-    /* фон кнопки */
     padding-left: 0.7em;
     padding-top: 3em;
-    /* отступ от текста */
     outline: none;
-    /* убирать контур в Mozilla */
     height: 100px;
-        font-size: 18px;
+    font-size: 18px;
 }

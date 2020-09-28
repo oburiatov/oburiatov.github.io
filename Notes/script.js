@@ -1,8 +1,8 @@
-var notes_id = [];
-var notes_number = 0;
-var data_storage = window.localStorage;
-var links_to_Note_objects = [];
-var url = window.location;
+var notes_id = [],
+    notes_number = 0,
+    data_storage = window.localStorage,
+    links_to_Note_objects = [],
+    url = window.location;
 
 function seconds_with_leading_zeros(dt) {
     return (dt.getSeconds() < 10 ? '0' : '') + dt.getSeconds();
@@ -26,7 +26,6 @@ function AddNote() {
 
     var element = document.getElementById("mainNote"),
         link = document.createElement("div"),
-        br = document.createElement("br"),
         content = document.createTextNode("Новая заметка"),
         now = new Date(),
         time = now.toDateString() + ', ' + now.getHours() + ':' + minutes_with_leading_zeros(now) + ':' + seconds_with_leading_zeros(now);
@@ -52,9 +51,8 @@ function HighlightNote(divID) {
     link.classList.add("active_Note");
     url.hash = divID;
     links_to_Note_objects.forEach(element => {
-        element.__proto__ = Note.prototype;
         if (element.id === divID) {
-            element.isHold = true;
+            element.OnHold = true;
             appearNoteField(element, link);
         }
     })
@@ -66,8 +64,7 @@ function HighlightNote(divID) {
 function DeleteNote() {
 
     links_to_Note_objects.forEach(Element => {
-        Element.__proto__ = Note.prototype;
-        if (Element.isHold) {
+        if (Element.OnHold) {
             var elem = document.getElementById("noteField");
             elem.value = "";
             var elem = document.getElementById(Element.id);
@@ -84,15 +81,6 @@ function DeleteNote() {
 }
 
 function add_note_descriptions(element, content, time) {
-
-    //    var p = document.createElement("p"),
-    //        p1 = document.createElement("p");
-    //
-    //    element.appendChild(p);
-    //    p.appendChild(content);
-    //
-    //    element.appendChild(p1);
-    //    p1.appendChild(time);
 
     element.appendChild(content);
     element.appendChild(document.createElement("br"));
@@ -117,10 +105,11 @@ function appearNoteField(note, link) {
     textarea.focus();
     textarea.onchange = function () {
         var now = new Date();
-        note.time = now.toDateString() + ', ' + now.getHours() + ':' + now.getMinutes() + ':' + seconds_with_leading_zeros(now);
+        note.time = now.toDateString() + ', ' + now.getHours() + ':' + minutes_with_leading_zeros(now) + ':' + seconds_with_leading_zeros(now);
         note.text = textarea.value;
         note.name = insert_title(textarea.value);
         change_title(note);
+        save_notes();
 
     }
 
@@ -152,24 +141,21 @@ function change_title(class_note) {
     }
     add_note_descriptions(object, document.createTextNode(class_note.name), document.createTextNode(class_note.time));
 
-    //    object.appendChild(document.createTextNode(class_note.name);
 }
 
 function check_all_active_Notes() {
     links_to_Note_objects.forEach(Element => {
-        Element.__proto__ = Note.prototype;
-        if (Element.isHold) {
-            Element.isHold = false;
+        if (Element.OnHold) {
+            Element.OnHold = false;
         }
     })
 }
 
 function dissapearing_active_Note() {
     links_to_Note_objects.forEach(Element => {
-        Element.__proto__ = Note.prototype;
-        if (Element.element.className == "active_Note") {
-            Element.element.classList.remove("active_Note");
-            Element.element.classList.add("Notes");
+        if (Element.HTMLDIVelem.className == "active_Note") {
+            Element.HTMLDIVelem.classList.remove("active_Note");
+            Element.HTMLDIVelem.classList.add("Notes");
         }
         var element = document.getElementById("noteDIV");
         while (element.firstChild) {
@@ -178,15 +164,38 @@ function dissapearing_active_Note() {
     })
 }
 
-window.onbeforeunload = function () {
+
+function save_notes() {
 
     data_storage.setItem("notesID", JSON.stringify(notes_id));
-
     data_storage.setItem("links_to_note_objects", JSON.stringify(links_to_Note_objects));
 }
 
+function check_url() {
+    var current_hash = url.hash.split("#")[1];
+
+    var changed = Boolean(false);
+    notes_id.forEach(Element => {
+        if (Element === current_hash) {
+            HighlightNote(current_hash);
+            changed = true;
+        }
+    })
+
+    if (changed === false) {
+        dissapearing_active_Note();
+        url.hash = "/";
+    }
+}
+
+
+window.onbeforeunload = function () {
+
+    save_notes();
+}
+
 window.addEventListener('load', () => {
-    data_storage.clear();
+    //data_storage.clear();
     let set_id = data_storage.getItem("notesID");
     let set_note_data = data_storage.getItem("links_to_note_objects");
     if (set_id != null && set_note_data != null) {
@@ -197,47 +206,25 @@ window.addEventListener('load', () => {
 
         links_to_Note_objects = JSON.parse(set_note_data);
         links_to_Note_objects.forEach(element => {
-            if (element.isHold == true) element.isHold = false;
-            element.__proto__ = Note.prototype;
+            if (element.OnHold == true) element.OnHold = false;
             var elem = document.getElementById("mainNote"),
                 link = document.createElement("div"),
-                br = document.createElement("br"),
                 content = document.createTextNode(element.name),
                 time = document.createTextNode(element.time);
 
-            element.element = link;
+            element.HTMLDIVelem = link;
             link.id = element.id;
             link.classList.add("Notes");
             elem.appendChild(link);
             add_note_descriptions(link, content, time);
 
         })
-
-
+        check_url();
     }
 })
 
 window.onhashchange = function () {
-    var current_hash = url.hash.split("#")[1];
-
-    if (url.hash.length > 0) {
-        if (current_hash === "/") {
-            dissapearing_active_Note();
-            url.hash = "/";
-        } else {
-            notes_id.forEach(Element => {
-                if (Element === current_hash)
-                    HighlightNote(current_hash);
-            })
-        }
-    } else if (url.hash.length === 0) {
-        dissapearing_active_Note();
-        url.hash = "/";
-
-    }
-
-
-
+    check_url();
 }
 
 window.onclick = function (event) {
