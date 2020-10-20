@@ -1,0 +1,443 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url('Fonts/title-text.ttf');
+}
+
+
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Courier New;
+}
+
+
+/*Telegram, Instagram*/
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.menu_drop a {
+    height: 4vh;
+    background: #3d3d3d;
+    color: #fff;
+    /*    padding:  0.5vh;*/
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-top: 2vh;
+    margin: 0;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #666;
+
+}
+
+.menu_drop a:hover {
+    background: #666;
+}
+
+.menu_drop {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 1;
+    display: none;
+    transition: 3s opacity;
+    border-left: 20px solid transparent;
+    text-align: center;
+
+}
+
+.btn-list:hover {
+    background-size: 80%;
+
+}
+
+.btn-list:hover .menu_drop {
+    display: block;
+    transition: 3s all;
+
+}
+
+
+.btn-gap {
+    padding-left: 4vh;
+}
+
+
+/*Кнопка домой*/
+
+.sticky-btn-home {
+    background-image: url(Pictures/homepage.svg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: sticky;
+    top: 15vh;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 20px 60px;
+    border: 2px solid #f1c40f;
+    color: #f1c40f;
+    font-family: 'Montserrat', sans-serif;
+    transition: .4s;
+}
+
+.sticky-btn-home a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: .4s;
+}
+
+.sticky-btn-home a:hover:after {
+    border-color: #f1c40f;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+}
+
+
+.content {
+    min-height: calc(100vh - 15vh);
+}
+
+
+/*Текст на странице*/
+
+.text-view {
+    font-size: 1.5em;
+    line-height: normal;
+
+
+}
+
+.p_right {
+    text-align: right;
+}
+
+.p_first {
+
+    padding-top: 1em;
+
+}
+
+
+
+
+.pic {
+    text-align: center;
+
+
+}
+
+
+.pic img {
+    width: 45vh;
+    height: auto;
+
+}
+
+.number-list {
+    margin: 1em;
+    list-style-type: decimal;
+}
+
+
+
+/*Панель*/
+
+.head-block {
+
+    height: 9vh;
+    width: 100%;
+    background-color: black;
+    display: inherit;
+    position: fixed;
+}
+
+
+/*Мигающая кнопка*/
+
+.btn-list {
+
+    position: relative;
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url(Pictures/heart.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    padding: 1vh;
+    cursor: pointer;
+    width: 7vh;
+    height: 7vh;
+}
+
+@keyframes anim {
+
+    from,
+    to {
+        background-image: url(Pictures/heart.svg);
+    }
+
+    33% {
+        background-image: url(Pictures/hover_heart.svg);
+    }
+
+    66% {
+        background-image: url(Pictures/active_heart.svg);
+    }
+}
+
+
+
+.tab {
+
+    border: 1px solid #ccc;
+    background-color: #ffff;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    width: calc(100%/3);
+    height: 7em;
+    font-weight: bold;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+
+    display: none;
+    padding: 3vh 5vw 5vh 10vw;
+    border-top: none;
+}
+
+.navigation {
+    padding-top: 9vh;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+}
+
+
+
+/*Анимация солнце*/
+.sun {
+
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    background-image: url(./Pictures/sun.svg);
+    top: 1vh;
+    animation-name: sun-anim;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+}
+
+@keyframes sun-anim {
+    0% {
+
+        transform: translateX(25vw) translateY(1vh);
+    }
+
+    50% {
+        transform: translateX(75vw) translateY(1vh) rotate(5turn);
+    }
+
+    100% {
+        transform: translateX(25vw) translateY(1vh);
+
+    }
+}
+
+
+
+/*Грид титулка*/
+
+.grid {
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 60% 35%;
+    grid-gap: 2em;
+
+}
+
+
+/*Титулка*/
+
+.title-bold-letter {
+    font-size: 3em;
+    font-weight: bold;
+
+
+}
+
+.title-pic {
+    padding-left: 120px;
+    padding-top: 2em;
+    text-align: center;
+}
+
+.title-pic img {
+    width: 40em;
+    height: auto;
+
+
+
+}
+
+.title-text {
+    line-height: normal;
+    font-family: WorkSans !important;
+    font-size: 1.5em;
+}
+
+
+.no-number-list {
+    margin-left: 1em;
+    margin-bottom: 2em;
+    list-style-type: none;
+}
+
+/*Интервалы титулка*/
+.gaps {
+    padding-bottom: 1em;
+}
+
+
+/*Футер*/
+.information {
+
+    height: 15vh;
+    width: auto;
+    background-color: black;
+}
+
+.subscr-title {
+    font-family: Arial;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    font-size: 1.5em;
+    color: white;
+}
+
+.subscr input {
+    width: 260px;
+    height: 42px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: 2px solid #7BA7AB;
+    border-radius: 5px;
+    outline: none;
+    background: #F9F0DA;
+    color: #9E9C9C;
+    font-size: 16px;
+    box-shadow: 3px 3px red;
+}
+
+.subscr button {
+    top: 0;
+    width: 110px;
+    height: 42px;
+    border: none;
+    background: #7BA7AB;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    padding: 0;
+
+}
+
+.subscr button:before {
+    content: "Подписаться";
+    font-size: 16px;
+    color: #F9F0DA;
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+    .sun {
+        display: none;
+    }
+
+    .grid {
+
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+
+    }
+
+    .gaps {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .sticky-btn-home {
+        display: none;
+    }
+
+    .title-pic {
+        padding: 10% 0 0 0;
+        text-align: center;
+
+
+    }
+
+    .title-pic img {
+        width: 70%;
+        height: auto;
+    }
+
+}
+
+@media (min-width: 1199px) and (max-width: 1500px) {
+    .title-pic img {
+        width: 30em;
+        height: auto;
+    }
+
+    .text-view {
+        padding-left: 7em;
+    }
+
+}
