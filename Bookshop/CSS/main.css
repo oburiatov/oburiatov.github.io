@@ -7,7 +7,7 @@
 .TextTitle {
 
     text-align: center;
-    font-size: 1vw;
+    font-size: 0.9vw;
 
     padding-bottom: 1vw;
 }
@@ -17,7 +17,9 @@
     vertical-align: middle;
 
 }
-
+.card-text img{
+    max-height: 400px;
+}
 .PicSales img {
 
     max-width: 50vw;
@@ -58,6 +60,7 @@
     height: 42px;
     margin-left: 50px;
     margin-top: 10px;
+    margin-bottom: 20px;
     border: 2px solid #7BA7AB;
     border-radius: 5px;
     outline: none;
