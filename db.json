@@ -9,10 +9,11 @@
             "genre": "Бізнес-психологія",
             "author": "Елісон Ґрін",
             "year": "2019",
-            "price": "149",
+            "price": "199/149",
             "publisher": "Віват",
-            "boldcover":"true",
-            "section":"1"
+            "boldcover": "true",
+            "section": "1",
+            "sales": "true"
     },
         {
             "url": "clear-mind",
@@ -25,8 +26,9 @@
             "year": "2020",
             "price": "525",
             "publisher": "Наш Формат",
-            "boldcover":"true",
-            "section":"1"
+            "boldcover": "true",
+            "section": "1",
+            "sales": "false"
     },
         {
             "url": "komunikatsiya-vid-nulya",
@@ -37,10 +39,11 @@
             "genre": "Мотивація, Психологія",
             "author": "Марія Титаренко",
             "year": "2019",
-            "price": "100",
+            "price": "200/100",
             "publisher": "Видавництво Старого Лева",
-            "boldcover":"false",
-            "section":"1"
+            "boldcover": "false",
+            "section": "1",
+            "sales": "true"
     },
         {
             "url": "50-najkraschyh-knyzhok-iz-samorozvytku-v-infografitsi",
@@ -51,10 +54,11 @@
             "genre": "Популярна психологія",
             "author": "Ірина Юреня",
             "year": "2020",
-            "price": "390",
+            "price": "400/390",
             "publisher": "Моноліт-Bizz",
-            "boldcover":"true",
-            "section":"1"
+            "boldcover": "true",
+            "section": "1",
+            "sales": "true"
     },
         {
             "url": "prostymy-slovamy",
@@ -67,8 +71,9 @@
             "year": "2020",
             "price": "140",
             "publisher": "Наш Формат",
-            "boldcover":"false",
-            "section":"2"
+            "boldcover": "false",
+            "section": "2",
+            "sales": "false"
     },
         {
             "url": "syla-divchat",
@@ -79,10 +84,11 @@
             "genre": "Мотиваційна література",
             "author": "КАТЕРИНА БАБКІНА, МАРК ЛІВІН",
             "year": "2018",
-            "price": "250",
+            "price": "299/250",
             "publisher": "#книголав",
-            "boldcover":"true",
-            "section":"2"
+            "boldcover": "true",
+            "section": "2",
+            "sales": "true"
     },
         {
             "url": "radist-magiya-prostyh-rechej",
@@ -95,8 +101,9 @@
             "year": "2020",
             "price": "210",
             "publisher": "Наш Формат",
-            "boldcover":"false",
-            "section":"2"
+            "boldcover": "false",
+            "section": "2",
+            "sales": "false"
     },
         {
             "url": "chudovyj-ranok.-yak-ne-prospaty-zhyttya",
@@ -107,10 +114,11 @@
             "genre": "Мотиваційна література",
             "author": "Гел Елрод",
             "year": "2017",
-            "price": "175",
+            "price": "200/175",
             "publisher": "Наш Формат",
-            "boldcover":"true",
-            "section":"2"
+            "boldcover": "true",
+            "section": "2",
+            "sales": "true"
     },
         {
             "url": "prokrastynaciya",
@@ -123,8 +131,9 @@
             "year": "2018",
             "price": "150",
             "publisher": "Видавництво Старого Лева",
-            "boldcover":"false",
-            "section":"3"
+            "boldcover": "false",
+            "section": "3",
+            "sales": "false"
     },
         {
             "url": "spotikayuchis-ob-shchastya-pozitivna-psihologiya",
@@ -137,8 +146,23 @@
             "year": "2019",
             "price": "160",
             "publisher": "Клуб Сімейного Дозвілля",
-            "boldcover":"false",
-            "section":"3"
+            "boldcover": "false",
+            "section": "3",
+            "sales": "false"
     }
-        ]
+        ],
+    "sections": [
+        {
+            "sectionID": 1,
+            "sectionname": "Self-development"
+        },
+        {
+            "sectionID": 2,
+            "sectionname": "Motivational"
+        },
+        {
+            "sectionID": 3,
+            "sectionname": "Psychological"
+        }
+    ]
 }
