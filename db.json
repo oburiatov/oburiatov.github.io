@@ -10,9 +10,9 @@
             "year": "2019",
             "price": "199/149",
             "publisher": "Віват",
-            "boldcover": "true",
+            "boldcover": "1",
             "section": "1",
-            "sales": "true"
+            "sales": "1"
     },
         {
             "url": "clear-mind",
@@ -24,9 +24,9 @@
             "year": "2020",
             "price": "525",
             "publisher": "Наш Формат",
-            "boldcover": "true",
+            "boldcover": "1",
             "section": "1",
-            "sales": "false"
+            "sales": "0"
     },
         {
             "url": "komunikatsiya-vid-nulya",
@@ -38,9 +38,9 @@
             "year": "2019",
             "price": "200/100",
             "publisher": "Видавництво Старого Лева",
-            "boldcover": "false",
+            "boldcover": "0",
             "section": "1",
-            "sales": "true"
+            "sales": "1"
     },
         {
             "url": "50-najkraschyh-knyzhok-iz-samorozvytku-v-infografitsi",
@@ -52,9 +52,9 @@
             "year": "2020",
             "price": "400/390",
             "publisher": "Моноліт-Bizz",
-            "boldcover": "true",
+            "boldcover": "1",
             "section": "1",
-            "sales": "true"
+            "sales": "1"
     },
         {
             "url": "prostymy-slovamy",
@@ -66,9 +66,9 @@
             "year": "2020",
             "price": "140",
             "publisher": "Наш Формат",
-            "boldcover": "false",
+            "boldcover": "0",
             "section": "2",
-            "sales": "false"
+            "sales": "0"
     },
         {
             "url": "syla-divchat",
@@ -80,9 +80,9 @@
             "year": "2018",
             "price": "299/250",
             "publisher": "#книголав",
-            "boldcover": "true",
+            "boldcover": "1",
             "section": "2",
-            "sales": "true"
+            "sales": "1"
     },
         {
             "url": "radist-magiya-prostyh-rechej",
@@ -94,9 +94,9 @@
             "year": "2020",
             "price": "210",
             "publisher": "Наш Формат",
-            "boldcover": "false",
+            "boldcover": "0",
             "section": "2",
-            "sales": "false"
+            "sales": "0"
     },
         {
             "url": "chudovyj-ranok.-yak-ne-prospaty-zhyttya",
@@ -108,9 +108,9 @@
             "year": "2017",
             "price": "200/175",
             "publisher": "Наш Формат",
-            "boldcover": "true",
+            "boldcover": "1",
             "section": "2",
-            "sales": "true"
+            "sales": "1"
     },
         {
             "url": "prokrastynaciya",
@@ -122,9 +122,9 @@
             "year": "2018",
             "price": "150",
             "publisher": "Видавництво Старого Лева",
-            "boldcover": "false",
+            "boldcover": "0",
             "section": "3",
-            "sales": "false"
+            "sales": "0"
     },
         {
             "url": "spotikayuchis-ob-shchastya-pozitivna-psihologiya",
@@ -136,9 +136,9 @@
             "year": "2019",
             "price": "160",
             "publisher": "Клуб Сімейного Дозвілля",
-            "boldcover": "false",
+            "boldcover": "0",
             "section": "3",
-            "sales": "false"
+            "sales": "0"
     }
         ],
     "sections": [
