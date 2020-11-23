@@ -8,7 +8,9 @@ if(content["books"][0]["sales"]==1)
 img.src=content["books"][0]["img-path"];
 var pc= document.getElementById("insertimg4");
 pc.appendChild(img);
-
+img.src=content["books"][1]["img-path"];
+var pc= document.getElementById("insertimg5");
+pc.appendChild(img);
 
 
     console.log(content["books"][0]["sales"]);
