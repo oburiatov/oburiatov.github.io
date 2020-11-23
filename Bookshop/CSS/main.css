@@ -43,10 +43,11 @@
 }
 
 .block-size img {
-    min-width: 500px;
-    min-height: 500px;
-    max-width: 500px;
-    max-height: 500px;
+    padding: 20px;
+/*    min-width: 400px;*/
+/*    min-height: 400px;*/
+    max-width: 400px;
+    max-height: 400px;
 
 }
 

@@ -24,16 +24,24 @@ elem_name= "author-name"+num.toString();
 
 getelemByID_author[i]= document.getElementById(elem_name);
 author[i]=document.createElement("DIV");
-author[i]=document.createTextNode(content["books"][i]["name"]);
+author[i]=document.createTextNode(content["books"][i]["author"]);
 getelemByID_author[i].appendChild(author[i]);
+
+elem_name= "title-name"+num.toString();
+
+getelemByID_title[i]= document.getElementById(elem_name);
+title[i]=document.createElement("DIV");
+title[i]=document.createTextNode(content["books"][i]["name"]);
+getelemByID_title[i].appendChild(title[i]);
+
 
 elem_name= "picture-box"+num.toString();
 
 getelemByid_img[i]= document.getElementById(elem_name);
 img[i]=document.createElement("IMG");
-console.log(content["books"][i]["images"])
 img[i].src=content["books"][i]["images"];
 getelemByid_img[i].appendChild(img[i]);
+
 
 
 }
