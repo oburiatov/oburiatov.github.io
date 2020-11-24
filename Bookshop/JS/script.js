@@ -4,6 +4,9 @@ var img =[10],
     getelemByID_title=[10], 
     author=[10], 
     getelemByID_author=[10],
+    price=[10],
+    how_much=[10], isCheaper=[10],
+    getelemByID_btn_price=[10],
     response, content
 
 
@@ -15,6 +18,12 @@ content =  await response.json();
 
 var num;
 var elem_name;
+
+
+var billboard= document.getElementById("billboard1");
+var billboard_place=document.createElement("IMG");
+billboard_place=content["billboard"][0]["image"];
+billboard_place.appendChild(billboard_place);
 
 for(var i = 0; i<10; i++)
 {
@@ -42,6 +51,24 @@ img[i]=document.createElement("IMG");
 img[i].src=content["books"][i]["images"];
 getelemByid_img[i].appendChild(img[i]);
 
+elem_name= "btn-price"+num.toString();
+
+getelemByID_btn_price[i]= document.getElementById(elem_name);
+price[i]=document.createElement("DIV");
+how_much[i]= content["books"][i]["price"];
+
+isCheaper[i]=content["books"][i]["sales"];
+if(content["books"][i]["sales"]==1){
+const two_prices= how_much[i].split('/');
+getelemByID_btn_price[i].innerHTML+=(two_prices[0]+ "UAH").strike();
+price[i]=document.createTextNode(" "+two_prices[1] + "UAH");
+getelemByID_btn_price[i].appendChild(price[i]);
+
+}
+else{
+    price[i]=document.createTextNode(how_much[i] + "UAH");
+    getelemByID_btn_price[i].appendChild(price[i]);
+}
 
 
 }
@@ -71,20 +98,43 @@ window.addEventListener('load', () => {
 
     getResponse()
 
-
-
-
-
-
-
-
-
     }, 1500);
 
-
-
-
-
 })
+
+
+
+function changeToBuy(pos)
+{
+
+    var new_node;
+    getelemByID_btn_price[pos-1].innerHTML = '';
+    new_node=document.createElement("DIV");
+    new_node=document.createTextNode("Add to cart");
+    getelemByID_btn_price[pos-1].appendChild(new_node);
+}
+
+function changeToPrice(pos)
+{
+
+    var new_node;
+    getelemByID_btn_price[pos-1].innerHTML = '';
+    if(isCheaper[pos-1]==1){
+console.log("true");
+        const two_prices= how_much[pos-1].split('/');
+        getelemByID_btn_price[pos-1].innerHTML+=(two_prices[0]+ "UAH").strike();
+        price[pos-1]=document.createTextNode(" "+two_prices[1] + "UAH");
+        getelemByID_btn_price[pos-1].appendChild(price[pos-1]);
+        
+        }
+    else{
+            price[pos-1]=document.createTextNode(how_much[pos-1] + "UAH");
+            getelemByID_btn_price[pos-1].appendChild(price[pos-1]);
+        }
+
+
+
+
+}
 
 
