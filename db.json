@@ -1,7 +1,7 @@
 {
     "books": [
         {
-            "uniqeID": "fff111",
+            "uniqueID": "fff111",
             "url": "ask-a-manager",
             "images": "Pictures/selfd1.jpeg",
             "name": "«Ask a Manager. Спитай у керівника: як працювати з нетямущими колегами й босами, які крадуть ваш робочий час»",
@@ -16,7 +16,7 @@
     },
 
         {
-            "uniqeID": "fff112",
+            "uniqueID": "fff112",
             "url": "clear-mind",
             "images": "Pictures/selfd2.png",
             "name": "«Структуроване мислення. Ясний розум в інформаційному хаосі»",
@@ -30,7 +30,7 @@
             "sales": "0"
     },
         {
-            "uniqeID": "fff113",
+            "uniqueID": "fff113",
             "url": "komunikatsiya-vid-nulya",
             "images": "Pictures/selfd3.jpg",
             "name": "«Комунікація від нуля. Есеї для мані»",
@@ -44,7 +44,7 @@
             "sales": "1"
     },
         {
-            "uniqeID": "fff114",
+            "uniqueID": "fff114",
             "url": "50-najkraschyh-knyzhok-iz-samorozvytku-v-infografitsi",
             "images": "Pictures/selfd4.jpeg",
             "name": "«50 найкращих книжок із саморозвитку в інфографіці»",
@@ -58,7 +58,7 @@
             "sales": "1"
     },
         {
-            "uniqeID": "fff115",
+            "uniqueID": "fff115",
             "url": "prostymy-slovamy",
             "images": "Pictures/motiv1.jpeg",
             "name": "«Простими словами. Як розібратися у своїх емоціях»",
@@ -72,7 +72,7 @@
             "sales": "0"
     },
         {
-            "uniqeID": "fff116",
+            "uniqueID": "fff116",
             "url": "syla-divchat",
             "images": "Pictures/motiv2.jpeg",
             "name": "«Сила дівчат»",
@@ -86,7 +86,7 @@
             "sales": "1"
     },
         {
-            "uniqeID": "fff117",
+            "uniqueID": "fff117",
             "url": "radist-magiya-prostyh-rechej",
             "images": "Pictures/motiv3.jpeg",
             "name": "«Радість. Магія простих речей»",
@@ -100,7 +100,7 @@
             "sales": "0"
     },
         {
-            "uniqeID": "fff118",
+            "uniqueID": "fff118",
             "url": "chudovyj-ranok.-yak-ne-prospaty-zhyttya",
             "images": "Pictures/motiv4.jpeg",
             "name": "«Чудовий ранок. Як не проспати життя»",
@@ -114,7 +114,7 @@
             "sales": "1"
     },
         {
-            "uniqeID": "fff119",
+            "uniqueID": "fff119",
             "url": "prokrastynaciya",
             "images": "Pictures/psych1.jpeg",
             "name": "«Прокрастинація»",
@@ -128,7 +128,7 @@
             "sales": "0"
     },
         {
-            "uniqeID": "fff1110",
+            "uniqueID": "fff1110",
             "url": "prygody-v-orgazmotroni",
             "images": "Pictures/psych2.jpeg",
             "name": "«Пригоди в оргазмотроні»",

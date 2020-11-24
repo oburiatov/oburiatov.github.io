@@ -28,12 +28,16 @@ billboard.appendChild(billboard_place);
 for(var i = 0; i<10; i++)
 {
 
+num=i+1;
 elem_name= "btn-dscrp"+num.toString();
+console.log(elem_name)
+
 use_id= document.getElementsByClassName(elem_name);
+console.log(content["books"][i]["uniqueID"])
 use_id.id=content["books"][i]["uniqueID"];
 
 
-num=i+1;
+
 elem_name= "author-name"+num.toString();
 
 getelemByID_author[i]= document.getElementById(elem_name);
@@ -61,8 +65,10 @@ elem_name= "btn-price"+num.toString();
 getelemByID_btn_price[i]= document.getElementById(elem_name);
 price[i]=document.createElement("DIV");
 how_much[i]= content["books"][i]["price"];
-
 isCheaper[i]=content["books"][i]["sales"];
+
+
+
 if(content["books"][i]["sales"]==1){
 const two_prices= how_much[i].split('/');
 getelemByID_btn_price[i].innerHTML+=(two_prices[0]+ "UAH").strike();
@@ -142,7 +148,20 @@ console.log("true");
 
 }
 
+function DetailsAboutBook(BookID)
+{
+
+// var bookElement=document.getElementById(BookID);
+// bookElement.innerHTML=''
+
+};
 
 
+
+
+window.onclick = function (event) {
+    console.log(event.target.id)
+        DetailsAboutBook(event.target.id);
+}
 
 
