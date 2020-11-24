@@ -18,15 +18,20 @@ content =  await response.json();
 
 var num;
 var elem_name;
-
+var use_id;
 
 var billboard= document.getElementById("billboard1");
 var billboard_place=document.createElement("IMG");
-billboard_place=content["billboard"][0]["image"];
-billboard_place.appendChild(billboard_place);
+billboard_place.src=content["billboard"][0]["image"];
+billboard.appendChild(billboard_place);
 
 for(var i = 0; i<10; i++)
 {
+
+elem_name= "btn-dscrp"+num.toString();
+use_id= document.getElementsByClassName(elem_name);
+use_id.id=content["books"][i]["uniqueID"];
+
 
 num=i+1;
 elem_name= "author-name"+num.toString();
@@ -136,5 +141,8 @@ console.log("true");
 
 
 }
+
+
+
 
 

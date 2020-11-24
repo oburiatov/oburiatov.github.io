@@ -1,6 +1,7 @@
 {
     "books": [
         {
+            "uniqeID": "fff111",
             "url": "ask-a-manager",
             "images": "Pictures/selfd1.jpeg",
             "name": "«Ask a Manager. Спитай у керівника: як працювати з нетямущими колегами й босами, які крадуть ваш робочий час»",
@@ -10,11 +11,12 @@
             "year": "2019",
             "price": "199/149",
             "publisher": "Віват",
-            "boldcover": "1",
             "section": "1",
             "sales": "1"
     },
+
         {
+            "uniqeID": "fff112",
             "url": "clear-mind",
             "images": "Pictures/selfd2.png",
             "name": "«Структуроване мислення. Ясний розум в інформаційному хаосі»",
@@ -24,11 +26,11 @@
             "year": "2020",
             "price": "525",
             "publisher": "Наш Формат",
-            "boldcover": "1",
             "section": "1",
             "sales": "0"
     },
         {
+            "uniqeID": "fff113",
             "url": "komunikatsiya-vid-nulya",
             "images": "Pictures/selfd3.jpg",
             "name": "«Комунікація від нуля. Есеї для мані»",
@@ -38,11 +40,11 @@
             "year": "2019",
             "price": "200/100",
             "publisher": "Видавництво Старого Лева",
-            "boldcover": "0",
             "section": "1",
             "sales": "1"
     },
         {
+            "uniqeID": "fff114",
             "url": "50-najkraschyh-knyzhok-iz-samorozvytku-v-infografitsi",
             "images": "Pictures/selfd4.jpeg",
             "name": "«50 найкращих книжок із саморозвитку в інфографіці»",
@@ -52,11 +54,11 @@
             "year": "2020",
             "price": "400/390",
             "publisher": "Моноліт-Bizz",
-            "boldcover": "1",
             "section": "1",
             "sales": "1"
     },
         {
+            "uniqeID": "fff115",
             "url": "prostymy-slovamy",
             "images": "Pictures/motiv1.jpeg",
             "name": "«Простими словами. Як розібратися у своїх емоціях»",
@@ -66,11 +68,11 @@
             "year": "2020",
             "price": "140",
             "publisher": "Наш Формат",
-            "boldcover": "0",
             "section": "2",
             "sales": "0"
     },
         {
+            "uniqeID": "fff116",
             "url": "syla-divchat",
             "images": "Pictures/motiv2.jpeg",
             "name": "«Сила дівчат»",
@@ -80,11 +82,11 @@
             "year": "2018",
             "price": "299/250",
             "publisher": "#книголав",
-            "boldcover": "1",
             "section": "2",
             "sales": "1"
     },
         {
+            "uniqeID": "fff117",
             "url": "radist-magiya-prostyh-rechej",
             "images": "Pictures/motiv3.jpeg",
             "name": "«Радість. Магія простих речей»",
@@ -94,11 +96,11 @@
             "year": "2020",
             "price": "210",
             "publisher": "Наш Формат",
-            "boldcover": "0",
             "section": "2",
             "sales": "0"
     },
         {
+            "uniqeID": "fff118",
             "url": "chudovyj-ranok.-yak-ne-prospaty-zhyttya",
             "images": "Pictures/motiv4.jpeg",
             "name": "«Чудовий ранок. Як не проспати життя»",
@@ -108,11 +110,11 @@
             "year": "2017",
             "price": "200/175",
             "publisher": "Наш Формат",
-            "boldcover": "1",
             "section": "2",
             "sales": "1"
     },
         {
+            "uniqeID": "fff119",
             "url": "prokrastynaciya",
             "images": "Pictures/psych1.jpeg",
             "name": "«Прокрастинація»",
@@ -122,11 +124,11 @@
             "year": "2018",
             "price": "150",
             "publisher": "Видавництво Старого Лева",
-            "boldcover": "0",
             "section": "3",
             "sales": "0"
     },
         {
+            "uniqeID": "fff1110",
             "url": "prygody-v-orgazmotroni",
             "images": "Pictures/psych2.jpeg",
             "name": "«Пригоди в оргазмотроні»",
@@ -136,7 +138,6 @@
             "year": "2018",
             "price": "200",
             "publisher": "Видавництво Старого Лева",
-            "boldcover": "0",
             "section": "3",
             "sales": "0"
     }
