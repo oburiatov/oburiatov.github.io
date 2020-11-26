@@ -8,7 +8,8 @@ var img =[10],
     how_much=[10], isCheaper=[10],
     getelemByID_btn_price=[10],
     response, content
-
+    var use_id=[10];
+    var use_descrp_class=[10];
 
 
 async function getResponse()
@@ -18,7 +19,7 @@ content =  await response.json();
 
 var num;
 var elem_name;
-var use_id;
+
 
 var billboard= document.getElementById("billboard1");
 var billboard_place=document.createElement("IMG");
@@ -30,12 +31,10 @@ for(var i = 0; i<10; i++)
 
 num=i+1;
 elem_name= "btn-dscrp"+num.toString();
-console.log(elem_name)
 
-use_id= document.getElementsByClassName(elem_name);
-console.log(content["books"][i]["uniqueID"])
-use_id.id=content["books"][i]["uniqueID"];
-
+use_id[i]=document.createElement("div");
+use_id[i].id=content["books"][i]["uniqueID"];
+use_descrp_class[i]= document.getElementByClassName(elem_name).appendChild(use_id[i]);
 
 
 elem_name= "author-name"+num.toString();
@@ -80,7 +79,7 @@ else{
     price[i]=document.createTextNode(how_much[i] + "UAH");
     getelemByID_btn_price[i].appendChild(price[i]);
 }
-
+////////////////////////////////////////////////////////////////////////////////
 
 }
 
@@ -151,8 +150,8 @@ console.log("true");
 function DetailsAboutBook(BookID)
 {
 
-// var bookElement=document.getElementById(BookID);
-// bookElement.innerHTML=''
+var bookElement=document.getElementById(BookID);
+bookElement.innerHTML=''
 
 };
 
