@@ -1,6 +1,6 @@
-import TemplateProcessor from 'view/templateProcessor.js'
-import Client from 'view/client.js'
-import Router from 'view/router.js'
+import TemplateProcessor from './templateProcessor.js'
+import Client from './client.js'
+import Router from './router.js'
 
 const router = new Router();
 const templateProcessor= new TemplateProcessor();
