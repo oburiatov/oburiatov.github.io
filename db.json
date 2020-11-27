@@ -54,7 +54,9 @@
                 "price": "400/390",
                 "publisher": "Моноліт-Bizz",
                 "sales": "1"
+    }]
     }],
+    [{
         "Motivational": [
             {
                 "uniqueID": "fff115",
@@ -107,7 +109,9 @@
                 "price": "200/175",
                 "publisher": "Наш Формат",
                 "sales": "1"
+    }]
     }],
+       [{
         "Psychological": [
             {
                 "uniqueID": "fff119",
