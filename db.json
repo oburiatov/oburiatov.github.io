@@ -1,6 +1,6 @@
 {
     "books": {
-
+[
         "Self-development": [
             {
                 "uniqueID": "fff111",
@@ -136,7 +136,7 @@
                 "sales": "0"
     }
 ]
-    },
+    ]},
 
     "billboard": [
         {
