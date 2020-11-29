@@ -168,7 +168,15 @@ window.addEventListener('load', () => {
 
     let arr_cart=data_storage.getItem("books_in_cart");
     books_in_cart= JSON.parse(arr_cart);
-    renewQuantity(books_in_cart.length)
+    if(books_in_cart.length==null)
+    {
+        renewQuantity(0)
+    }
+    else
+    {
+        renewQuantity(books_in_cart.length)
+    }
+
     getPrice();
     createPage();
     setTimeout(function(){
