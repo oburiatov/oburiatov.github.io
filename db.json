@@ -145,13 +145,5 @@
             "image": "Pictures/sales.png"
         }
     ],
-    "conf": [
-        {
-            "id": 1,
-            "FN": "A",
-            "LN": "B",
-            "Em": "f",
-            "Ph": "9"
-        }
-    ]
+    "conf": [{"id": 1,"FN": "A","LN": "B","Em": "f","Ph": "9"}]
 }
