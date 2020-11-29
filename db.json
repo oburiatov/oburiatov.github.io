@@ -1,6 +1,5 @@
 {
     "books": [{
-
             "self-development": [
                 {
                     "uniqueID": "fff111",
@@ -15,7 +14,6 @@
                     "publisher": "Віват",
                     "sales": "1"
     },
-
                 {
                     "uniqueID": "fff112",
                     "url": "clear-mind",
@@ -141,14 +139,12 @@
     }
 ]
     }],
-
     "billboard": [
         {
             "billboardID": 1,
             "image": "Pictures/sales.png"
         }
     ],
-
     "conf": [
         {
             "id": 1,
