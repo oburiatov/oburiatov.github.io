@@ -1,3 +1,30 @@
+img#billboardclick {
+    animation: 10s linear 0s normal none infinite running rot;
+    -webkit-animation: 10s linear 0s normal none infinite running rot;
+}
+@keyframes rot {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(500px);}
+        50%{
+            transform: translateX(-500px);
+        }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+@-webkit-keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .loader {
     text-align: center;
     display: block;
@@ -6,7 +33,28 @@
 .cart{
     color: #ffffff;
     border: 2px solid grey;
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+@keyframes anim {
+
+    from,
+    to {
+        border: 2px solid white;
+    }
+
+    33% {
+        border: 2px solid grey;
+    }
+
+    66% {
+        border: 2px solid red;
+    }
+}
+
 #buy-btn{
 display: none;
 }
@@ -226,10 +274,11 @@ btn:hover{
     }
 
     .block-size img {
-        min-width: 300px;
-        min-height: 300px;
-        max-width: 300px;
-        max-height: 300px;
+        /*min-width: 300px;*/
+        /*min-height: 300px;*/
+        /*max-width: 300px;*/
+        /*max-height: 300px;*/
+        display: none;
 
     }
 
