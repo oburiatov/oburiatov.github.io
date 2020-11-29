@@ -149,13 +149,13 @@
         }
     ],
 
-    "confirmed": [
+    "conf": [
         {
             "id": 1,
-            "FName": "A",
-            "LName": "B",
-            "Email": "f",
-            "Phone": "9"
+            "FN": "A",
+            "LN": "B",
+            "Em": "f",
+            "Ph": "9"
         }
     ]
 }
