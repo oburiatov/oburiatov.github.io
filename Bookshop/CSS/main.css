@@ -3,13 +3,41 @@
     display: block;
     padding-top: 10%;
 }
+.cart{
+    color: #ffffff;
+    border: 2px solid grey;
+}
+#buy-btn{
+display: none;
+}
 
+#submit-btn{
+display: none;
+}
+
+.table{
+    margin-top: 3em;
+    position: relative;
+
+
+}
+.cell-size{
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+.pin-navbar{
+    position: static;
+    width: 100%;
+    z-index: 999999;
+top: 0;
+}
 
 #showtable {
     display: none;
 }
 
 .TextHeader {
+    padding-top: 15em;
     text-align: center;
     font-size: 1vw;
 
@@ -28,6 +56,22 @@
     vertical-align: middle;
 
 }
+.SingleElem{
+
+    text-align: center;
+    vertical-align: middle;
+    max-width: 50%;
+}
+.makeBold{
+    font-size: 2em;
+}
+.SingleElemDescr{
+    text-align: left;
+    vertical-align: middle;
+    max-width: 50%;
+    margin-bottom: 5em;
+    margin-top: 5em;
+}
 
 .PicSales img {
 
@@ -38,16 +82,16 @@
 .block-size {
     height: 600px;
     width: 600px;
-    min-height: 600px;
-    min-width: 600px;
+    min-height: 500px;
+    min-width: 500px;
 }
 
 .block-size img {
     padding: 20px;
 /*    min-width: 400px;*/
 /*    min-height: 400px;*/
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 350px;
+    max-height: 350px;
 
 }
 

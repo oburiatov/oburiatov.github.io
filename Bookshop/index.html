@@ -4,163 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Bookshop</title>
-    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="CSS/main.css">
-    <script src="JS/script.js"></script>
+    <script src="JS/view/index.js" type="module"></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">PROчитай</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary pin-navbar">
+            <a class="navbar-brand" href="#/">PROчитай</a>
 
-            <div class="collapse navbar-collapse" id="navbarColor03">
+
+            <div class="collapse navbar-collapse show" id="navbarColor03">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#/" id="HomeBtn">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sales</a>
+                        <a class="nav-link" href="#catalog/sales" id="SalesBtn">Sales</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Psychological</a>
+                        <a class="nav-link" href="#catalog/psychological" id="PsychologicalBtn">Psychological</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Self-development</a>
+                        <a class="nav-link" href="#catalog/self-development" id="Self-devBtn">Self-development</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Motivational</a>
+                        <a class="nav-link" href="#catalog/motivational" id="MotivationalBtn">Motivational</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/cart" id="cart-btn">Checkout cart</a>
                     </li>
                 </ul>
+
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Checkout</button>
+<!--                    <div><button class="btn btn-secondary my-2 my-sm-0" type="submit" id="cart-btn">Checkout cart</button></div>-->
+                    <div class="toast-body show cart" id="quantity-block">
+                        Cart: 0 book
+                    </div>
+
+                    <button class="btn btn-secondary my-2 my-sm-0 margin-btn-buy" id="buy-btn" type="submit">Buy</button>
+                    <button class="btn btn-secondary my-2 my-sm-0 margin-btn-buy" id="submit-btn" type="submit">Submit</button>
                 </form>
+
             </div>
         </nav>
     </header>
-
     <div class="loader" id="loader">
         <img src="Pictures/loader.gif" alt="">
     </div>
-    <table class="table" id="showtable">
-        <thead>
-            <tr>
-                <th class="TextHeader ">BookShop "PROЧИТАЙ"</th>
-            </tr>
-        </thead>
-        <tbody>
+    <table class="table down-table cell-size" id="showtable">
 
-            <tr>
-                <th scope="row" class="PicSales" id="billboard1"></th>
-            </tr>
-            <tr>
-                <th scope="row" class="PicSales ">
-                    <div class=" card mb-3 card-header TextTitle">Self-development</div>
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name1"></div>
-                        <div class="card-body" id="picture-box1">
-                            <h4 class="card-title" id="title-name1"></h4>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-dscrp1">Description</button>
-                        <button type="button" class="btn btn-secondary" id="btn-price1" onmouseover="changeToBuy(1)" onmouseout="changeToPrice(1)" ></button>
-                    </div>
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name2"></div>
-                        <div class="card-body" id="picture-box2">
-                            <h4 class="card-title" id="title-name2"></h4>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-dscrp2">Description</button>
-                        <button type="button" class="btn btn-secondary" id="btn-price2" onmouseover="changeToBuy(2)" onmouseout="changeToPrice(2)"></button>
-                    </div>
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name3"></div>
-                        <div class="card-body" id="picture-box3">
-                            <h4 class="card-title" id="title-name3"></h4>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-dscrp3">Description</button>
-                        <button type="button" class="btn btn-secondary" id="btn-price3" onmouseover="changeToBuy(3)" onmouseout="changeToPrice(3)"></button>
-                    </div>
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name4"></div>
-                        <div class="card-body" id="picture-box4">
-                            <h4 class="card-title" id="title-name4"></h4>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-dscrp4">Description</button>
-                        <button type="button" class="btn btn-secondary" id="btn-price4" onmouseover="changeToBuy(4)" onmouseout="changeToPrice(4)"></button>
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <th scope="row" class="PicSales ">
-                    <div class=" card mb-3 card-header TextTitle">Motivational</div>
-
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name5"></div>
-                        <div class="card-body" id="picture-box5">
-                            <h4 class="card-title" id="title-name5"></h4>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-dscrp5">Description</button>
-                        <button type="button" class="btn btn-secondary" id="btn-price5" onmouseover="changeToBuy(5)" onmouseout="changeToPrice(5)"></button>
-                    </div>
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name6"></div>
-                        <div class="card-body" id="picture-box6">
-                            <h4 class="card-title" id="title-name6"></h4>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-dscrp6">Description</button>
-                        <button type="button" class="btn btn-secondary" id="btn-price6" onmouseover="changeToBuy(6)" onmouseout="changeToPrice(6)"></button>
-                    </div>
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name7"></div>
-                        <div class="card-body" id="picture-box7">
-                            <h4 class="card-title" id="title-name7"></h4>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-dscrp7">Description</button>
-                        <button type="button" class="btn btn-secondary" id="btn-price7" onmouseover="changeToBuy(7)" onmouseout="changeToPrice(7)"></button>
-                    </div>
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name8"></div>
-                        <div class="card-body" id="picture-box8">
-                            <h4 class="card-title" id="title-name8"></h4>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-dscrp8">Description</button>
-                        <button type="button" class="btn btn-secondary" id="btn-price8" onmouseover="changeToBuy(8)" onmouseout="changeToPrice(8)"></button>
-                    </div>
-
-                </th>
-            </tr>
-            <tr>
-                <th scope="row" class="PicSales ">
-                    <div class=" card mb-3 card-header TextTitle">Psychological</div>
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name9"></div>
-                        <div class="card-body" id="picture-box9">
-                            <h4 class="card-title" id="title-name9"></h4>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-dscrp9">Description</button>
-                        <button type="button" class="btn btn-secondary" id="btn-price9" onmouseover="changeToBuy(9)" onmouseout="changeToPrice(9)"></button>
-                    </div>
-                    <div class="card border-info mb-3  first-block block-size" style="max-width: 40%;">
-                        <div class="card-header " id="author-name10"></div>
-                        <div class="card-body" id="picture-box10">
-                            <h4 class="card-title" id="title-name10"></h4>
-                        </div>
-                        <button type="button" name="HHHH" class="btn btn-secondary" id="btn-dscrp10">Description</button>
-                        <button type="button" class="btn btn-secondary "btn-price10" onmouseover="changeToBuy(10)" onmouseout="changeToPrice(10)"></button>
-                    </div>
-                </th>
-            </tr>
-
-
-
-        </tbody>
     </table>
+
+
 
     <footer id="showfooter">
         <div class="information">
