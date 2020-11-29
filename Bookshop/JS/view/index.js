@@ -134,6 +134,7 @@ function createPageConfirmed(ID)
     import ((`./confirmed.js`))
         .then ((viewModule)=> {
             view= viewModule.default;
+            console.log(ID+'fff')
             templateProcessor.render(view(ID))
         })
 }
@@ -144,7 +145,8 @@ function createPageConfirmed(ID)
 var uniqueID=[],
     price=[],
     books_in_cart=[],
-    url=window.location
+    url=window.location,
+    data_storage = window.localStorage
 
 
 
@@ -164,6 +166,9 @@ async function getPrice(){
 
 window.addEventListener('load', () => {
 
+    let arr_cart=data_storage.getItem("books_in_cart");
+    books_in_cart= JSON.parse(arr_cart);
+    renewQuantity(books_in_cart.length)
     getPrice();
     createPage();
     setTimeout(function(){
@@ -230,6 +235,16 @@ function highlight(idElem)
 
 
 }
+function save_cart()
+{
+data_storage.setItem("books_in_cart",JSON.stringify(books_in_cart));
+
+}
+
+function clear_cart()
+{
+    data_storage.clear();
+}
 
 function highlight_right_btn()
 {
@@ -285,6 +300,10 @@ function show_preorder()
 }
 function show_order()
 {
+    for ( let i=0;i<books_in_cart.length;i++)books_in_cart.splice(i)
+    renewQuantity(books_in_cart.length);
+    clear_cart();
+
     var myPhone = document.getElementById('inputPhone').value;
     var myFName = document.getElementById('inputEmail').value;
     var myLName = document.getElementById('inputLName').value;
@@ -292,11 +311,16 @@ function show_order()
 
     url.hash='/confirmed'
     client.sendData(1, myFName, myLName, myEmail, myPhone)
-    let idd= client.sendData(1, myFName, myLName, myEmail, myPhone)
-    console.log(idd)
-    createPageConfirmed(idd)
-}
+    let idd
+    return client.sendData(1, myFName, myLName, myEmail, myPhone)
+        .then(data=>
+    createPageConfirmed(data.id))
 
+
+}
+window.onbeforeunload = function (){
+    save_cart()
+}
 
 window.onclick = function (event) {
 

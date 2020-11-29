@@ -1,23 +1,17 @@
 class Client{
+
     async getData(endpoint){
         return await fetch(`https://my-json-server.typicode.com/alexeiburiatov/alexeiburiatov.github.io/${endpoint}`)
             .then(response=> response.json())
     };
     sendData(id, FName, LName, Email,Phone){
-        let uniqueID;
-        fetch(`https://my-json-server.typicode.com/alexeiburiatov/alexeiburiatov.github.io/conf`, {
+
+       return fetch(`https://my-json-server.typicode.com/alexeiburiatov/alexeiburiatov.github.io/conf`, {
             method:'POST',
             body: JSON.stringify({id:id, FN:FName, LN:LName, Em:Email, Ph:Phone})})
-                .then((response)=>
-                {
-                    return response.json();
-                })
-                .then((data)=>
-                {
-                    uniqueID=data.id
-                })
+                .then(response=>response.json())
 
-return uniqueID
+
     }
     isAlaliableURL(data, url){
         let isHere= false
