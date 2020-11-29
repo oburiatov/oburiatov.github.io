@@ -1,7 +1,7 @@
 {
     "books": [{
 
-        "Self-development": [
+        "self-development": [
             {
                 "uniqueID": "fff111",
                 "url": "ask-a-manager",
@@ -57,7 +57,7 @@
     }]
     },
     {
-        "Motivational": [
+        "motivational": [
             {
                 "uniqueID": "fff115",
                 "url": "prostymy-slovamy",
@@ -112,7 +112,7 @@
     }]
     },
        {
-        "Psychological": [
+        "psychological": [
             {
                 "uniqueID": "fff119",
                 "url": "prokrastynaciya",
