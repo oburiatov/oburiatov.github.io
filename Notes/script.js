@@ -30,7 +30,6 @@ function AddNote() {
         now = new Date(),
         time = now.toDateString() + ', ' + now.getHours() + ':' + minutes_with_leading_zeros(now) + ':' + seconds_with_leading_zeros(now);
 
-
     notes_id.push(makeid());
     link.id = notes_id[notes_number++];
     link.classList.add("Notes");
