@@ -166,15 +166,13 @@ async function getPrice(){
 
 window.addEventListener('load', () => {
 
-    let arr_cart=data_storage.getItem("books_in_cart");
-    books_in_cart= JSON.parse(arr_cart);
-    if(books_in_cart==[])
-    {
-        renewQuantity(0)
-    }
-    else
-    {
-        renewQuantity(books_in_cart.length)
+    let arr_cart = data_storage.getItem("books_in_cart");
+    let books_in_cart = arr_cart ? JSON.parse(arr_cart) : [];
+    
+    if (books_in_cart.length === 0) {
+        renewQuantity(0);
+    } else {
+        renewQuantity(books_in_cart.length);
     }
 
     getPrice();
